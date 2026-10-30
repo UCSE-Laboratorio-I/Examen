@@ -1,0 +1,165 @@
+{
+  "tp_metadata": {
+    "tp_id": "LAB1-2026-EXAMEN-PRIMERA-INSTANCIA",
+    "title": "Primera Instancia de Examen Integrador: Teoría (TP1–TP5) y Práctica en Prolog (TP7)",
+    "catedra": "Laboratorio I - Tecnicatura Universitaria en Automatización y Robótica / Informática - UCSE DASS",
+    "ciclo": 2026,
+    "docente": "Ing. Fabio D. Argañaraz",
+    "version": "2.0.0"
+  },
+  "security": {
+    "algorithm": "SHA-256 + Salted HMAC + Canonical Prolog AST Alpha-Hash",
+    "protected": true
+  },
+  "max_score": 100,
+  "exercises": {
+    "ej1_teoria_tp1": {
+      "part": "teoria",
+      "weight": 10,
+      "biblio": "Russell & Norvig Cap. 2.1–2.4 (pp. 36–49) y Cap. 26.2 (pp. 1024–1028) • Diapositivas Clase 1 (Slides 19–32) y Clase 3.1 (Slides 7–20).",
+      "feedback": "La Proactividad es la capacidad de tomar la iniciativa guiada por objetivos. En un sistema de diagnóstico médico, la salud del paciente y minimización de costos es la Medida de Rendimiento (Performance). El agente reactivo simple decide solo con la percepción actual ignorando el historial. Searle demuestra que la sintaxis formal no equivale a semántica ni comprensión consciente.",
+      "hashes": {
+        "item_propiedad_proactividad": "ebfe9319cc4ebec910763c696900572e0d73085ec1b0e925993e25cd3fdfedcb",
+        "item_peas_diagnostico_medico": "ca2528c5457d5d14ccd21f3854bcef9c1023238b7f1ab6153e06a58bc640441d",
+        "item_limitacion_reactivo_simple": "7cd95abb50eb47c656456e6edf53407088b114570eb6f60066f0bb30864b4114",
+        "item_habitacion_china_searle": "902331f51ed5c0674c37c2fcf5c8cc6210c18ea28d20f91f5e1aaf23a960ce20"
+      }
+    },
+    "ej2_teoria_tp2": {
+      "part": "teoria",
+      "weight": 10,
+      "biblio": "Russell & Norvig Cap. 3.2 (pp. 69–74) y Cap. 3.4.2–3.4.5 (pp. 82–90) • Diapositivas Clase 3.2 (Slides 18–32, 52–64).",
+      "feedback": "El mundo de la aspiradora con 2 recintos tiene 2 × 2² = 8 estados, y el 8-puzzle tiene 9!/2 = 181.440 estados alcanzables. UCS ordena la frontera por g(n) y exige costos de paso >= epsilon > 0. IDDFS combina la completitud/optimalidad de BFS con el consumo espacial lineal O(b·d) de DFS.",
+      "hashes": {
+        "item_combinatoria_aspiradora_8puzzle": "9d3ff3f46546c22a88c5dbf9cabd963cc07f17ddfe77146dcaa0f48c5c75a869",
+        "item_ucs_cola_condicion_optimalidad": "f8da8eb53d9cb53226e778df1ef4f05128576468ef3edfaa042c3acad5962dc0",
+        "item_iddfs_complejidad_ventaja": "c9ddbfd1ff4aed0974e6a2c9f04b9859b4ae9278161c380f2a7533bad3685c7f",
+        "item_iddfs_sobrecarga_regeneracion": "b45b5fdcada88bd5971d8b8e924625a2d5391a0f08123cc44a56633c3eda81a2"
+      }
+    },
+    "ej3_teoria_tp3": {
+      "part": "teoria",
+      "weight": 10,
+      "biblio": "Russell & Norvig Cap. 4.1.2–4.2.1 (pp. 104–112) • Diapositivas Clase 4 (Slides 16–26).",
+      "feedback": "En la traza de A* desde Arad, cuando Fagaras genera Bucarest con f = 450, A* no se detiene sino que expande primero Pitesti (f = 417), descubriendo la ruta óptima de 418 km. En grafos, A* requiere una heurística consistente (h(n) <= c(n,a,n') + h(n')). La mayor limitación práctica de A* es su consumo exponencial de memoria RAM O(bᵈ).",
+      "hashes": {
+        "item_traza_a_star_pitesti_bucarest": "274ef8029087f3786200e5b7f2f136e729da6339d9c12ee3863f1a9aff77d6cf",
+        "item_consistencia_desigualdad_triangular": "49baebac66bf2b1b1dff63eeb9c2a3f8792664342dfeebece8fabacd6a51bac8",
+        "item_relacion_consistencia_admisibilidad": "e60c46ff3e404a2240bc70b73cac46a10b5c9876165941dbcaf0bb3400a1fabc",
+        "item_cuello_botella_memoria_a_star": "e4cbeebb3553eea683a60ed6887358dda04481df3f39986bf89eb33d663e91a9"
+      }
+    },
+    "ej4_teoria_tp4": {
+      "part": "teoria",
+      "weight": 10,
+      "biblio": "Russell & Norvig Cap. 7.4–7.5 (pp. 204–214, Figura 7.11) • Diapositivas Clase 5 (`5 - Conocimiento y Razonamiento.pptx`).",
+      "feedback": "Por la Ley de De Morgan, ¬(P ∧ Q) es lógicamente equivalente a (¬P ∨ ¬Q), siendo falsa únicamente cuando P=V y Q=V. El algoritmo TT-Entails enumera los 2ⁿ modelos posibles, teniendo complejidad temporal O(2ⁿ) (problema co-NP-completo). La contraposición establece que (α ⇒ β) ≡ (¬β ⇒ ¬α) y la eliminación de implicación que (α ⇒ β) ≡ (¬α ∨ β).",
+      "hashes": {
+        "item_tabla_verdad_demorgan": "8e9ee61c014d0bd87a1e0993a3bb276fff8b69328ec09e52ad7e78056f6e4905",
+        "item_complejidad_tt_entails": "b19393b95973421bd832bc841a053da055072347d7df9f42470d187cc80653b0",
+        "item_equivalencia_contraposicion": "513d227098e00392fecd4c6b9a61ecb9e82d2ceb906bbd3ef97820d41160b92d",
+        "item_eliminacion_implicacion": "1f2c34bfdb5175a51072e8050e8279374378af4a82eae8aaf62c5a5ab7dfc338"
+      }
+    },
+    "ej5_teoria_tp5": {
+      "part": "teoria",
+      "weight": 10,
+      "biblio": "Russell & Norvig Cap. 8.2–8.4 (pp. 253–264) y Cap. 9.1 (pp. 272–277) • Diapositivas Clase 6 (`6 - Lógica de Primer Orden.pptx`, Slides 12–16).",
+      "feedback": "Los cuantificadores mixtos NO conmutan: ∃x ∀y Ama(x,y) difiere de ∀y ∃x Ama(x,y). Por dualidad de De Morgan, ∀x P(x) ≡ ¬∃x ¬P(x). En la definición de Hermano(x,y), es obligatorio incluir ¬(x = y) para que nadie sea su propio hermano. Al proposicionalizar con símbolos de funciones (como Padre(x)), el universo de Herbrand se vuelve infinito.",
+      "hashes": {
+        "item_no_conmutatividad_mixtos": "c3cba8cf9cd1db9701bb4ffebab7001b06f5a3e57a60416f4ecfe62e9bde0c38",
+        "item_dualidad_demorgan_cuantificadores": "2376b4d670bd0ecae8eb44fe548171653e59ac63fdc5356758088d035f6db4ea",
+        "item_igualdad_dominio_familia": "2971d7a37cff4dca9a194fd442c655f0dc5a39daabae8779f0ccaadc03d55e8b",
+        "item_proposicionalizacion_herbrand_infinito": "8b990d34e372ccce48663327b32e5c8132f7bcdf7c84460993e602a61e5a3daf"
+      }
+    },
+    "ej6_practica_caso1": {
+      "part": "practica",
+      "weight": 25,
+      "kb_weight": 13,
+      "questions_weight": 12,
+      "pl_file": "caso1_drones.pl",
+      "expected_pred_sigs": [
+        "enlace_aereo/2",
+        "consumo_bateria/3",
+        "viento_zona/2",
+        "vuelo_con_escala/3",
+        "ruta_segura_bajo_consumo/2"
+      ],
+      "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 6–18).",
+      "feedback": "En la red de drones, debes declarar los 9 hechos (3 de enlace_aereo/2, 3 de consumo_bateria/3 y 3 de viento_zona/2) y las 2 reglas deductivas (vuelo_con_escala/3 y ruta_segura_bajo_consumo/2).",
+      "kb_facts_hashes": [
+        "80f326d00613b0ef45870d132d1394d12dc0711ecfd6c5bf84c3839b5fd88369",
+        "f3f3b00f4cf63917b1277fdd0e0461051a3cd5c9614bc1936e9051ade3f06679",
+        "87c768ded4cde7b0be93bbe0e5ecd78cec8ee8e73d7bbdaf7820460a9b6edb43",
+        "6d37cd71ba51a1c3f9bff6a8a25a0f8bcd18bbd3c2ade7e9dbc45bed840d5c99",
+        "0dfd67618ca209cf9587fee1f283f35d28f10717dd49be778eaeeb48db5e228b",
+        "feac934cf003cc364c0ab99f0eea19fc612e63ca683f7035d705b5e6cbe820ee",
+        "01bd1408427061c043c2195b4f088082ec707dc99f8af4847de1612c072a655c",
+        "dd0d3d91a948806ccdb49c9d4503c74e23a5afd4d18f37ee7437f2be7f8476d3",
+        "336394bf62dbb017956a3928f3058a646d21bd5cccbd0a30966074e34d674815"
+      ],
+      "kb_rules_hashes": {
+        "vuelo_con_escala/3": [
+          "51db258db75a76aca306b6cecc1b2a4ce353962b52fd24cdedbca76acee93626"
+        ],
+        "ruta_segura_bajo_consumo/2": [
+          "d18b7a86f0c94e5be5dbb767b1a4b2a12713172e4b5e48715e3b57136af9fb01",
+          "df685219d2f91e8e2c7051eadc75421157d8b75730c34b0d64c0064d64a0fb35"
+        ]
+      },
+      "hashes": {
+        "item_aridad_consumo_bateria": "3d7935f72086198d6fd4fa2abd3620ffefe7793f00b4e3b257effee140bdbdbc",
+        "item_consulta_escala_jujuy_humahuaca": "a0c60790673ec809fb8f1129109081b0eb714ffb1dd9fc778bd1a31f0310b9ec",
+        "item_backtracking_rutas_seguras": "3f3bd51c614355ffbf6617ac2aec08f88d629ba8723de7805c2eefe671f79a90",
+        "item_evaluacion_ruta_segura_tilcara": "22a4d812de7a34a811ce14cb0acd1bbc3af9a976f0f6ffcd12bb806672a0fefa",
+        "item_evaluacion_humahuaca_puna_cwa": "aa35e7ad193a79a9dc2c23fbbda0a4ee63c4902877942a3f916ebbe048a53b5f",
+        "item_cwa_enlace_directo_inexistente": "e23fd338674719077102e8dcd9f1fdea6e25fef257f2f5a0bbf3256338532ef0"
+      }
+    },
+    "ej7_practica_caso2": {
+      "part": "practica",
+      "weight": 25,
+      "kb_weight": 13,
+      "questions_weight": 12,
+      "pl_file": "caso2_ciberseguridad.pl",
+      "expected_pred_sigs": [
+        "servidor/2",
+        "alerta_cve/2",
+        "red_segmento/2",
+        "aislamiento_inmediato/1",
+        "servidor_critico_dmz/2"
+      ],
+      "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 11–20).",
+      "feedback": "En el SOC de ciberseguridad, debes declarar los 9 hechos (3 de servidor/2, 3 de alerta_cve/2 y 3 de red_segmento/2) y las reglas aislamiento_inmediato/1 y servidor_critico_dmz/2.",
+      "kb_facts_hashes": [
+        "f6ae7f335bbc98376c2feb404fd715c4a79c858407020d8f915b6f0b2f4bb0f4",
+        "90eee40aaea7c89f90d4a526ec496f23a4a4d76a024e09b5b104007372ba2ccd",
+        "37e74cbef40705152e873012260fecd5bbe282b2ce198aab92e04a4a7d49c174",
+        "baef056fac90e3d1c42bfd8e9208d477d24694abd01d76d61d0d329166512e05",
+        "ad7540aa1fe34456602217b9995cbcddef83289334f4f75fbc3f7f50831c986b",
+        "527147699d1f1d538f6ff5a05ee8c8c9f70175dca507c396e4c6f1b42201aff3",
+        "f26902f8ab8cac41d06bb1f3e6b52916d63e0ae26265e79316a6255a351adf6e",
+        "1dae33c3fbf5f8e3b843bfbcd299921b510341dcd023a202a7ce5af0b3bec901",
+        "3cf494f8157ee1d51a74a19403f6212aa3aceca7d3669662b16c6430843b2d85"
+      ],
+      "kb_rules_hashes": {
+        "aislamiento_inmediato/1": [
+          "690cd346677856224459e5ed40d253851dd6213be6230e9114e3c9071ef841a7"
+        ],
+        "servidor_critico_dmz/2": [
+          "5afa2c381baa5237687ce9a8a52930cf9adb98d44ced5ea9a4487f7a40cd7c08",
+          "b8fe35ec5d5485cd175863a72b2996551b7419385ec398fb6f8b240be1dff314"
+        ]
+      },
+      "hashes": {
+        "item_estructura_clausula_horn_soc": "9711500546294fb065205c0b53e392c0856ee2cf6e3c6031f72e00533e70dc43",
+        "item_consulta_hosts_aislamiento": "6498fa5b8c706d182170fc21a40ea4cb466b14a2572a31902308d21d2edb9f7f",
+        "item_evaluacion_portal_dmz": "249f942537bc24db3c96a8586a25ae65570fe7dfa92b83a70c765d3b268a7ccc",
+        "item_traza_sld_pagos_dmz": "e51db3f0a00f51af000493872c51e3867cad85465cf01d93fab647dc58639e42",
+        "item_consulta_negacion_segura_soc": "ef277ed1db9e9ce247ed6e626dd37d668cfd3d1b0c70df8ed7bff69a5c04f0ea",
+        "item_evaluacion_backup_aislamiento_cwa": "79d02735b560fad359e6003df209bd9f27ba2efacbc1182c5f27f5a280e126f9"
+      }
+    }
+  }
+}
