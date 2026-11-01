@@ -51,7 +51,7 @@
 <body class="bg-[#F4F6F9] dark:bg-[#01182E] text-[#212529] dark:text-slate-100 min-h-screen antialiased selection:bg-[#01305B] selection:text-[#FFED00]">
 
   <!-- =========================================================================
-       TOPBAR INSTITUCIONAL UCSE (Estilo https://www.ucse.edu.ar/ - #01305B)
+       TOPBAR INSTITUCIONAL UCSE (#01305B) - EXAMEN CONTROLADO: TEMPORIZADOR AUTOMÁTICO
   ========================================================================== -->
   <div class="ucse-topbar bg-[#01305B] text-white border-b border-[#1569AE]/40 text-xs">
     <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
@@ -59,17 +59,9 @@
         <span class="px-2 py-0.5 rounded bg-[#FFED00] text-[#01305B] font-extrabold text-[11px]">UCSE • DASS</span>
         <span class="hidden sm:inline text-slate-200">Universidad Católica de Santiago del Estero &bull; Departamento Académico San Salvador</span>
       </div>
-      <div class="flex items-center gap-3" id="exam-timer-controls">
-        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#023967] border border-[#6EC1E4]/30">
-          <span>⏱️</span>
-          <span id="timer-display" class="prolog-code font-bold text-[#FFED00] text-xs">90:00</span>
-        </div>
-        <button type="button" id="btn-timer-toggle" class="px-2.5 py-1 rounded bg-[#FFED00] hover:bg-[#FDD247] text-[#01305B] font-bold transition text-[11px]">
-          ▶ Iniciar
-        </button>
-        <button type="button" id="btn-timer-reset" class="px-2 py-1 rounded bg-[#023967] hover:bg-[#1569AE] text-white border border-white/20 transition text-[11px]" title="Reiniciar cronómetro a 90 minutos">
-          ↺
-        </button>
+      <div class="flex items-center gap-2" id="exam-timer-controls">
+        <span class="text-xs text-slate-200">⏱️ Tiempo restante:</span>
+        <span id="timer-display" class="prolog-code font-bold text-[#FFED00] text-xs px-2.5 py-1 rounded-lg bg-[#023967] border border-[#6EC1E4]/30">90:00</span>
       </div>
     </div>
   </div>
@@ -106,11 +98,8 @@
         </div>
       </div>
 
-      <!-- Botones Globales Obligatorios -->
+      <!-- Botones Globales (Examen Controlado: Sin botón de bibliografía externa durante la prueba) -->
       <div class="flex items-center gap-2">
-        <button type="button" id="btn-open-biblio-all" class="px-2.5 py-1.5 text-xs font-bold rounded-lg bg-[#F4F6F9] dark:bg-[#01182E] hover:bg-slate-200 text-[#01305B] dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] transition flex items-center gap-1.5">
-          <span>📖</span> <span class="hidden md:inline">Bibliografía</span>
-        </button>
         <button type="button" id="btn-git-guide" class="px-2.5 py-1.5 text-xs font-bold rounded-lg bg-[#F4F6F9] dark:bg-[#01182E] hover:bg-slate-200 text-[#01305B] dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] transition flex items-center gap-1.5">
           <span>🐙</span> <span class="hidden md:inline">Guía Entrega</span>
         </button>
@@ -239,10 +228,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_propiedad_proactividad" aria-label="1. Propiedades Operacionales de los Agentes Inteligentes:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="reactividad_inmediata">Reactividad: responder oportunamente a cambios bruscos del entorno</option>
-                <option value="proactividad_iniciativa_metas">Proactividad: exhibir un comportamiento orientado a objetivos tomando la iniciativa</option>
-                <option value="habilidad_social_protocolos">Habilidad Social: negociar y comunicarse con otros agentes artificiales o humanos</option>
-                <option value="estaticidad_determinista">Estaticidad: permanecer invariable sin ejecutar acciones sobre el medio</option>
+                <option value="proactividad_iniciativa_metas">Proactividad: tomar la iniciativa exhibiendo comportamiento dirigido a metas.</option>
+                <option value="reactividad_inmediata">Reactividad: responder oportunamente a cambios del entorno.</option>
+                <option value="habilidad_social_protocolos">Habilidad Social: negociar y coordinar acciones con otros agentes del medio.</option>
+                <option value="autonomia_operacional">Autonomía: operar con independencia según su propia experiencia y aprendizaje.</option>
               </select>
             </div>
           </div>
@@ -250,15 +239,15 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">2. Especificación PEAS de un Sistema Automatizado de Diagnóstico Médico:</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">Dentro de la matriz PEAS del sistema clínico, ¿a qué dimensión corresponden "Paciente sano, minimizar costos de internación y evitar demandas legales"?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">Dentro de la matriz PEAS de un sistema de diagnóstico clínico, ¿a qué dimensión corresponden "Maximizar la seguridad y recuperación del paciente, mejorar la precisión diagnóstica y utilizar eficientemente los recursos sanitarios"?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_peas_diagnostico_medico" aria-label="2. Especificación PEAS de un Sistema Automatizado de Diagnóstico Médico:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="entorno_hospitalario">Entorno (Environment): hospital, cuerpo del paciente y personal sanitario</option>
-                <option value="medida_rendimiento_performance">Medida de Rendimiento (Performance): criterio cuantitativo que evalúa el éxito externo del agente</option>
-                <option value="actuadores_clinicos">Actuadores (Actuators): pantalla de visualización de recetas, derivaciones y solicitudes de análisis</option>
-                <option value="sensores_ingreso_datos">Sensores (Sensors): teclado e interfaz de ingreso de síntomas y signos vitales</option>
+                <option value="entorno_hospitalario">Entorno: pacientes, personal médico, equipos hospitalarios e infraestructura clínica.</option>
+                <option value="medida_rendimiento_performance">Medida de rendimiento: criterios externos utilizados para evaluar la seguridad, efectividad y eficiencia del sistema.</option>
+                <option value="actuadores_clinicos">Actuadores: pantallas con informes diagnósticos, derivaciones médicas y sugerencias terapéuticas.</option>
+                <option value="sensores_ingreso_datos">Sensores: formularios de síntomas, resultados de laboratorio y dispositivos de signos vitales.</option>
               </select>
             </div>
           </div>
@@ -266,15 +255,15 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">3. Arquitectura de Agentes Reactivos Simples (Reglas Condición-Acción):</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cuál es la característica y limitación estructural definitoria de un agente reactivo simple como la aspiradora básica?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cuál es la característica y limitación estructural definitoria de un agente reactivo simple?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_limitacion_reactivo_simple" aria-label="3. Arquitectura de Agentes Reactivos Simples (Reglas Condición-Acción):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="planifica_futuro_con_a_estrella">Mantiene un modelo completo del mundo y planifica secuencias óptimas con A*</option>
-                <option value="ignora_historial_usa_solo_percepcion_actual">Selecciona acciones basándose únicamente en la percepción actual inmediata (reglas condición-acción), ignorando todo el historial previo y fallando en entornos parcialmente observables</option>
-                <option value="aprende_redes_neuronales_profundas">Reentrena sus pesos sinápticos en cada paso mediante retropropagación del error</option>
-                <option value="almacena_secuencia_completa_percepciones">Guarda en una base de datos relacional la secuencia infinita P* antes de actuar</option>
+                <option value="mantiene_estado_interno_continuo">Mantiene un estado interno continuo para modelar aspectos no perceptibles del entorno.</option>
+                <option value="evalua_proyecciones_futuras_metas">Evalúa proyecciones futuras comparando múltiples secuencias hacia un estado meta.</option>
+                <option value="ignora_historial_usa_solo_percepcion_actual">Selecciona acciones según la percepción actual, sin registrar el historial previo.</option>
+                <option value="cuantifica_deseabilidad_utilidad">Cuantifica la deseabilidad de cada acción mediante una función de utilidad global.</option>
               </select>
             </div>
           </div>
@@ -287,25 +276,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_habitacion_china_searle" aria-label="4. Experimento Mental de la Habitación China de John Searle (1980):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="representa_sensores_prueba_ia_fuerte">Representa los sensores ópticos y demuestra que cualquier programa alcanza conciencia humana (IA Fuerte)</option>
-                <option value="representa_software_sintaxis_no_implica_semantica">Representa el Programa/Algoritmo; concluye que manipular símbolos formalmente (sintaxis) no genera comprensión real del significado (semántica)</option>
-                <option value="representa_memoria_ram_prueba_turing">Representa la memoria caché y demuestra que el Test de Turing es imposible de programar</option>
-                <option value="representa_actuadores_motores">Representa los actuadores robóticos y refuta la existencia de la IA Débil</option>
+                <option value="representa_sensores_opticos">Los sensores ópticos; concluye que la percepción visual genera conciencia reflexiva.</option>
+                <option value="representa_memoria_trabajo">La memoria de trabajo; concluye que el almacenamiento masivo equivale a comprensión.</option>
+                <option value="representa_canal_comunicacion">El canal de comunicación; concluye que superar el Test de Turing refuta la IA Débil.</option>
+                <option value="representa_software_sintaxis_no_implica_semantica">El programa computacional; concluye que la sintaxis formal no produce semántica genuina.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 2.1–2.4 (pp. 36–49) y Cap. 26.2 (pp. 1024–1028) • Diapositivas Clase 1 (Slides 19–32) y Clase 3.1 (Slides 7–20).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T2: COMBINATORIA DE ESPACIOS DE ESTADOS, UCS E IDDFS
@@ -337,10 +315,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_combinatoria_aspiradora_8puzzle" aria-label="1. Combinatoria en Problemas de Juguete (Mundo de la Aspiradora y 8-Puzzle):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="aspiradora_4_puzzle_362880">Aspiradora: 4 estados posibles • 8-Puzzle: 9! = 362.880 estados alcanzables</option>
-                <option value="aspiradora_8_puzzle_181440">Aspiradora: 2 × 2² = 8 estados • 8-Puzzle: 9! / 2 = 181.440 estados alcanzables (por invariante de paridad de permutaciones)</option>
-                <option value="aspiradora_16_puzzle_64">Aspiradora: 16 estados • 8-Puzzle: 8² = 64 estados alcanzables</option>
-                <option value="aspiradora_2_puzzle_16777216">Aspiradora: 2 estados • 8-Puzzle: 8⁸ = 16.777.216 estados</option>
+                <option value="aspiradora_8_puzzle_181440">Aspiradora: 2 × 2² = 8 estados • 8-Puzzle: 9! / 2 = 181.440 estados alcanzables.</option>
+                <option value="aspiradora_4_puzzle_362880">Aspiradora: 4 estados posibles • 8-Puzzle: 9! = 362.880 estados alcanzables.</option>
+                <option value="aspiradora_16_puzzle_64">Aspiradora: 16 estados posibles • 8-Puzzle: 8² = 64 estados alcanzables.</option>
+                <option value="aspiradora_8_puzzle_40320">Aspiradora: 8 estados posibles • 8-Puzzle: 8! = 40.320 estados alcanzables.</option>
               </select>
             </div>
           </div>
@@ -348,15 +326,15 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">2. Búsqueda de Costo Uniforme (UCS — Uniform-Cost Search):</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cómo gestiona la frontera UCS y qué condición matemática requiere sobre el costo de cada paso para garantizar completitud y optimalidad?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cómo gestiona UCS la frontera y qué condición suficiente sobre los costos de paso garantiza completitud en espacios potencialmente infinitos?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_ucs_cola_condicion_optimalidad" aria-label="2. Búsqueda de Costo Uniforme (UCS — Uniform-Cost Search):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="pila_lifo_costos_negativos">Usa una pila LIFO y permite costos de paso negativos o nulos sin restricción</option>
-                <option value="cola_prioridad_g_costo_mayor_igual_epsilon">Usa una cola de prioridad ordenada por el costo acumulado g(n) y exige que todo costo de acción sea c(n, a, n') ≥ ε &gt; 0 para evitar lazos infinitos de costo cero</option>
-                <option value="cola_fifo_costos_constantes">Usa una cola FIFO y solo es óptima cuando todos los tramos miden exactamente 1 km</option>
-                <option value="cola_prioridad_solo_heuristica">Ordena los nodos exclusivamente por la heurística h(n) ignorando el camino recorrido</option>
+                <option value="cola_fifo_costos_uniformes">Cola FIFO ordenada por profundidad, con costos de paso constantes y uniformes.</option>
+                <option value="cola_prioridad_g_costos_positivos">Cola de prioridad ordenada por g(n), con costos de paso acotados c(n, a, n') ≥ ε &gt; 0.</option>
+                <option value="pila_lifo_costos_no_negativos">Pila LIFO ordenada por profundidad, con costos de paso generales no negativos.</option>
+                <option value="cola_prioridad_heuristica_admisible">Cola de prioridad ordenada por h(n), con función heurística admisible y acotada.</option>
               </select>
             </div>
           </div>
@@ -369,10 +347,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_iddfs_complejidad_ventaja" aria-label="3. Búsqueda Primero en Profundidad Iterativa (IDDFS):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="porque_no_regenera_ningun_nodo">Porque visita cada nodo exactamente una sola vez reteniendo todo el árbol en RAM O(bᵈ)</option>
-                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque incrementa progresivamente el límite l = 0, 1, 2..., combinando la completitud y optimalidad de BFS (para costos iguales) con el requerimiento de memoria lineal O(b · d) de DFS</option>
-                <option value="porque_usa_heuristica_manhattan">Porque incorpora información heurística del dominio para podar ramas subóptimas</option>
-                <option value="porque_busca_desde_la_meta">Porque ejecuta únicamente una búsqueda regresiva desde el objetivo sin expandir la raíz</option>
+                <option value="porque_no_regenera_ningun_nodo">Porque visita cada nodo una sola vez reteniendo el árbol completo en memoria O(b^d).</option>
+                <option value="porque_usa_heuristica_manhattan">Porque incorpora información heurística del dominio para podar ramas no prometedoras.</option>
+                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque combina la optimalidad de BFS con el requerimiento de memoria lineal O(b·d) de DFS.</option>
+                <option value="porque_ordena_por_costo_acumulado">Porque expande nodos en orden creciente de costo acumulado g(n) garantizando rapidez.</option>
               </select>
             </div>
           </div>
@@ -380,30 +358,19 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">4. Análisis Asintótico de la Regeneración de Nodos en IDDFS:</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Por qué volver a generar los niveles superiores en cada iteración de IDDFS NO deteriora el orden de complejidad temporal O(bᵈ)?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Por qué volver a generar los niveles superiores en cada iteración de IDDFS no deteriora el orden asintótico temporal O(b^d)?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_iddfs_sobrecarga_regeneracion" aria-label="4. Análisis Asintótico de la Regeneración de Nodos en IDDFS:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="porque_guarda_todo_en_disco_duro">Porque los nodos superiores se congelan en una lista cerrada exponencial</option>
-                <option value="mayoria_nodos_estan_en_nivel_mas_profundo">Porque en un árbol con factor de ramificación b, la inmensa mayoría de los nodos se concentra en el nivel de fondo d; los niveles superiores suman apenas un factor marginal ≈ b/(b−1)</option>
-                <option value="porque_salta_de_diez_en_diez">Porque el límite de profundidad se multiplica exponencialmente por 100 en cada paso</option>
-                <option value="porque_elimina_el_factor_b">Porque reduce el factor de ramificación b a 1 en todas las iteraciones</option>
+                <option value="porque_reutiliza_memoria_ram_previa">Porque los estados de niveles previos se congelan en memoria secundaria durante la búsqueda.</option>
+                <option value="porque_salta_niveles_pares">Porque la profundidad se duplica en cada iteración, omitiendo la exploración intermedia.</option>
+                <option value="porque_la_heuristica_poda_ramas">Porque la inclusión de podas heurísticas cancela asintóticamente el costo de regeneración.</option>
+                <option value="mayoria_nodos_estan_en_nivel_mas_profundo">Porque, cuando b &gt; 1, la mayor cantidad de nodos se encuentra en los niveles más profundos. Las regeneraciones agregan únicamente un factor constante, por lo que la complejidad temporal continúa siendo O(b^d).</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 3.2 (pp. 69–74) y Cap. 3.4.2–3.4.5 (pp. 82–90) • Diapositivas Clase 3.2 (Slides 18–32, 52–64).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T3: TRAZABILIDAD DE A* EN RUMANIA, CONSISTENCIA Y CUELLO DE BOTELLA DE MEMORIA
@@ -435,10 +402,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_traza_a_star_pitesti_bucarest" aria-label="1. Trazabilidad de A* en la Ruta de Arad a Bucarest:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="termina_inmediatamente_con_450">Detiene la búsqueda de inmediato al ver el nombre Bucarest y devuelve la ruta de 450 km</option>
-                <option value="expande_pitesti_f417_halla_optimo_418">No termina aún: mantiene Bucarest(450) en la frontera y expande primero Pitesti (f = 317 + 100 = 417 &lt; 450), hallando la solución óptima real con f = 418 km</option>
-                <option value="retrocede_a_timisoara_f447">Descarta tanto Fagaras como Pitesti y reinicia por la rama de Timisoara (f=447)</option>
-                <option value="entra_en_bucle_en_oradea">Cicla indefinidamente entre Sibiu y Oradea con costo 380 km</option>
+                <option value="expande_pitesti_f417_halla_optimo_418">Expande Pitesti (f = 417 &lt; 450), descubriendo luego la ruta óptima final de 418 km.</option>
+                <option value="termina_inmediatamente_con_450">Retorna de inmediato la meta Bucarest con costo 450 km al detectarla en la frontera.</option>
+                <option value="retrocede_a_timisoara_f447">Descarta Bucarest y retrocede hacia Timisoara por tener menor costo acumulado g(n).</option>
+                <option value="reinicia_con_mayor_ponderacion">Reinicia la búsqueda desde la raíz aplicando una ponderación heurística mayor.</option>
               </select>
             </div>
           </div>
@@ -451,10 +418,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_consistencia_desigualdad_triangular" aria-label="2. Heurística Consistente (Monótona) en Búsqueda en Grafos:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="h_mayor_que_costo_paso">h(n) &gt; c(n, a, n') + h(n'); permite eliminar la cola de prioridad</option>
-                <option value="desigualdad_triangular_optimo_sin_reabrir_cerrados">h(n) ≤ c(n, a, n') + h(n') (desigualdad triangular); garantiza que los valores f(n) sean no decrecientes y que al expandir un estado por primera vez ya se haya alcanzado por su camino óptimo</option>
-                <option value="h_igual_cero_en_todos_nodos">h(n) = g(n) en todo nodo; obliga a reabrir mil veces la lista cerrada</option>
-                <option value="consistencia_no_implica_admisibilidad">h(n) = ∞; es una propiedad más débil que la admisibilidad</option>
+                <option value="h_mayor_que_costo_paso">h(n) ≥ c(n, a, n') + h(n'); garantiza que la heurística sobreestime acelerando el paso.</option>
+                <option value="desigualdad_triangular_optimo_sin_reabrir_cerrados">h(n) ≤ c(n, a, n') + h(n'); garantiza f(n) monótono y optimalidad sin reabrir cerrados.</option>
+                <option value="h_igual_cero_en_todos_nodos">h(n) = c(n, a, n') - h(n'); asegura que el costo acumulado se reduzca hacia el objetivo.</option>
+                <option value="consistencia_no_implica_admisibilidad">h(n) ≤ h*(n); garantiza admisibilidad en árboles pero exige reabrir nodos en grafos.</option>
               </select>
             </div>
           </div>
@@ -467,10 +434,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_relacion_consistencia_admisibilidad" aria-label="3. Relación Lógica entre Consistencia y Admisibilidad:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="son_conjuntos_disjuntos">Son propiedades mutuamente excluyentes: ninguna heurística consistente puede ser admisible</option>
-                <option value="toda_consistente_es_admisible">Toda heurística consistente es automáticamente admisible (con h(meta)=0), mientras que existen heurísticas admisibles que no son consistentes</option>
-                <option value="toda_admisible_es_consistente_pero_no_al_reves">Toda heurística admisible es consistente, pero ninguna consistente es admisible</option>
-                <option value="solo_aplican_a_dfs">Ambas propiedades solo se aplican a la búsqueda primero en profundidad sin costos</option>
+                <option value="son_conjuntos_disjuntos">Son propiedades disjuntas: ninguna heurística consistente puede ser admisible.</option>
+                <option value="toda_admisible_es_consistente_pero_no_al_reves">Toda admisible es consistente, pero existen consistentes que no son admisibles.</option>
+                <option value="toda_consistente_es_admisible">Toda consistente es admisible, pero existen admisibles que no son consistentes.</option>
+                <option value="equivalentes_en_todo_espacio">Ambas propiedades son matemáticamente equivalentes en cualquier espacio de búsqueda.</option>
               </select>
             </div>
           </div>
@@ -483,25 +450,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej3_teoria_tp3" data-key="item_cuello_botella_memoria_a_star" aria-label="4. Limitación Práctica Principal del Algoritmo A* Estándar:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="no_encuentra_soluciones_optimas">Su incapacidad de hallar soluciones óptimas aun con heurísticas consistentes</option>
-                <option value="agotamiento_memoria_ram_exponencial">El consumo exponencial de memoria O(bᵈ), pues debe mantener todos los nodos generados en la frontera y en el conjunto de explorados, agotando la RAM mucho antes que el tiempo de CPU</option>
-                <option value="imposibilidad_de_usar_costos_reales">Que solo permite costos de paso iguales a cero</option>
-                <option value="complejidad_espacial_constante">Que descarta todos los nodos de la frontera impidiendo reconstruir el camino</option>
+                <option value="tiempo_calculo_cuadratico">El tiempo de cálculo cuadrático O(d²), al reevaluar la función heurística en cada nodo.</option>
+                <option value="perdida_completitud_grafos">La pérdida de completitud en grafos cíclicos, al no detectar caminos redundantes.</option>
+                <option value="incapacidad_solucion_optima">La incapacidad de hallar soluciones óptimas cuando el factor de ramificación es alto.</option>
+                <option value="agotamiento_memoria_ram_exponencial">El consumo de memoria exponencial O(b^d), al retener frontera y nodos explorados en RAM.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 4.1.2–4.2.1 (pp. 104–112) • Diapositivas Clase 4 (Slides 16–26).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO T4: TABLAS DE VERDAD, ALGORITMO TT-ENTAILS Y EQUIVALENCIAS LÓGICAS
@@ -533,10 +489,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_tabla_verdad_demorgan" aria-label="1. Verificación por Tabla de Verdad de la Ley de De Morgan ¬(P ∧ Q) ≡ (¬P ∨ ¬Q):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="falsa_cuando_ambas_son_falsas">Únicamente en la fila donde P = Falso y Q = Falso</option>
-                <option value="falsa_solo_cuando_p_y_q_son_verdaderas">Únicamente en la primera fila donde P = Verdadero y Q = Verdadero (siendo Verdadera en las otras 3 filas, idéntico a ¬(P ∧ Q))</option>
-                <option value="falsa_en_todas_las_filas">En las 4 filas de la tabla de verdad por ser una contradicción</option>
-                <option value="falsa_cuando_p_verdadero_q_falso">Cuando P = Verdadero y Q = Falso, pero verdadera cuando ambas son verdaderas</option>
+                <option value="falsa_solo_cuando_p_y_q_son_verdaderas">Únicamente en la combinación donde P = Verdadero y Q = Verdadero.</option>
+                <option value="falsa_cuando_ambas_son_falsas">Únicamente en la combinación donde P = Falso y Q = Falso.</option>
+                <option value="falsa_en_todas_las_filas">En las cuatro combinaciones posibles por tratarse de una contradicción.</option>
+                <option value="falsa_cuando_p_verdadero_q_falso">Únicamente en la combinación donde P = Verdadero y Q = Falso.</option>
               </select>
             </div>
           </div>
@@ -549,10 +505,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_complejidad_tt_entails" aria-label="2. Inferencia mediante Enumeración de Modelos (Algoritmo TT-Entails):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="lineal_n_modelos">Evalúa exactamente n modelos con complejidad temporal lineal O(n)</option>
-                <option value="exponencial_2_a_la_n_modelos">Evalúa los 2ⁿ modelos posibles del lenguaje, con complejidad temporal exponencial O(2ⁿ) y espacial O(n) por recorrido en profundidad</option>
-                <option value="logaritmica_log_n">Evalúa log₂(n) modelos en tiempo polinomial O(n²)</option>
-                <option value="infinitos_modelos_herbrand">Evalúa infinitos modelos incluso con 2 variables booleanas</option>
+                <option value="lineal_n_modelos">Evalúa n modelos posibles con complejidad temporal lineal O(n).</option>
+                <option value="exponencial_2_a_la_n_modelos">Evalúa 2^n modelos posibles con complejidad temporal exponencial O(2^n).</option>
+                <option value="factorial_n_modelos">Evalúa n! permutaciones con complejidad temporal factorial O(n!).</option>
+                <option value="polinomial_n2_modelos">Evalúa n^2 combinaciones con complejidad temporal polinomial O(n^2).</option>
               </select>
             </div>
           </div>
@@ -565,44 +521,33 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej4_teoria_tp4" data-key="item_equivalencia_contraposicion" aria-label="3. Equivalencias Lógicas Notables (Ley de Contraposición):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="beta_implica_alfa">(β ⇒ α) — Inversa directa</option>
-                <option value="no_alfa_implica_no_beta">(¬α ⇒ ¬β) — Negación simple del antecedente</option>
-                <option value="no_beta_implica_no_alfa">(¬β ⇒ ¬α) — Si no se cumple el consecuente, entonces no puede cumplirse el antecedente</option>
-                <option value="alfa_y_no_beta">(α ∧ ¬β) — Conjunción con el consecuente negado</option>
+                <option value="beta_implica_alfa">(β ⇒ α) — Implicación conversa directa.</option>
+                <option value="no_alfa_implica_no_beta">(¬α ⇒ ¬β) — Negación de antecedentes.</option>
+                <option value="no_beta_implica_no_alfa">(¬β ⇒ ¬α) — Ley formal de contraposición.</option>
+                <option value="alfa_y_no_beta">(α ∧ ¬β) — Negación de la implicación.</option>
               </select>
             </div>
           </div>
-          <!-- Ítem 4: item_eliminacion_implicacion -->
+          <!-- Ítem 4: item_equivalencia_eliminacion_implicacion -->
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
-              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">4. Transformación a Forma Normal Conjuntiva (Eliminación de Implicación):</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿A qué disyunción elemental equivale formalmente la sentencia condicional (α ⇒ β)?</span>
+              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">4. Eliminación de Implicación (Transformación a Disyunción):</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Cuál es la forma disyuntiva equivalente a (α ⇒ β) según la regla de eliminación de implicación?</span>
             </div>
             <div class="lg:w-96 shrink-0">
-              <select data-ex="ej4_teoria_tp4" data-key="item_eliminacion_implicacion" aria-label="4. Transformación a Forma Normal Conjuntiva (Eliminación de Implicación):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
+              <select data-ex="ej4_teoria_tp4" data-key="item_equivalencia_eliminacion_implicacion" aria-label="4. Eliminación de Implicación (Transformación a Disyunción):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="alfa_o_beta">(α ∨ β)</option>
-                <option value="no_alfa_o_beta">(¬α ∨ β)</option>
-                <option value="alfa_o_no_beta">(α ∨ ¬β)</option>
-                <option value="no_alfa_y_no_beta">(¬α ∧ ¬β)</option>
+                <option value="alfa_o_beta">(α ∨ β) — Disyunción afirmativa simple.</option>
+                <option value="alfa_y_no_beta_elim">(α ∧ ¬β) — Conjunción contraejemplo.</option>
+                <option value="no_alfa_y_no_beta">(¬α ∧ ¬β) — Negación conjunta disyuntiva.</option>
+                <option value="no_alfa_o_beta">(¬α ∨ β) — Eliminación de implicación.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 7.4–7.5 (pp. 204–214, Figura 7.11) • Diapositivas Clase 5 (`5 - Conocimiento y Razonamiento.pptx`).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
-           EJERCICIO T5: CUANTIFICADORES MIXTOS, IGUALDAD Y REDUCCIÓN A INFERENCIA PROPOSICIONAL
+           EJERCICIO T5: LÓGICA DE PRIMER ORDEN (LPO), CUANTIFICADORES MIXTOS Y TÉRMINOS DE HERBRAND
       ====================================================================== -->
       <article class="ucse-card p-6 md:p-8 bg-white dark:bg-[#023967]/90 border border-slate-200 dark:border-[#154D80] space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-[#154D80] pb-4">
@@ -610,7 +555,7 @@
             <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-[#01305B] text-[#FFED00] mb-1.5">
               <span>📘 Unidad 5 • TP N° 5</span>
             </div>
-            <h3 class="text-lg md:text-xl font-extrabold text-[#01305B] dark:text-white ucse-heading">Ejercicio T5: Cuantificadores Mixtos, Igualdad y Reducción a Inferencia Proposicional</h3>
+            <h3 class="text-lg md:text-xl font-extrabold text-[#01305B] dark:text-white ucse-heading">Ejercicio T5: Lógica de Primer Orden (LPO), Cuantificadores Mixtos y Términos de Herbrand</h3>
           </div>
           <span class="px-3.5 py-1 rounded-full bg-[#1569AE]/10 dark:bg-[#6EC1E4]/15 text-[#01305B] dark:text-[#6EC1E4] border border-[#1569AE]/30 text-xs font-extrabold self-start sm:self-auto shrink-0">
             10 Puntos (4 &times; 2,5 pts)
@@ -618,39 +563,39 @@
         </div>
 
         <p class="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
-          Evalúa las propiedades algebraicas y dualidad de los cuantificadores en LPO, el uso de la desigualdad de identidad en ingeniería del conocimiento familiar y los límites de la proposicionalización (Skolemización e infinitud del universo de Herbrand).
+          Evalúa el orden de cuantificadores mixtos, la dualidad de De Morgan en LPO, la axiomatización de dominios con el predicado de igualdad y los límites computacionales de la proposicionalización ante funciones anidadas.
         </p>
 
         <div class="space-y-3.5">
-          <!-- Ítem 1: item_no_conmutatividad_mixtos -->
+          <!-- Ítem 1: item_cuantificadores_mixtos_orden -->
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
-              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">1. Orden de Cuantificadores Mixtos (∀ y ∃):</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Qué ocurre con el significado semántico al invertir el orden entre ∃x ∀y Ama(x, y) y ∀y ∃x Ama(x, y)?</span>
+              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">1. Semántica y No Conmutatividad de Cuantificadores Mixtos (∀ y ∃):</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Por qué NO conmutan en general los cuantificadores mixtos (∃x ∀y P(x, y) no equivale a ∀y ∃x P(x, y))?</span>
             </div>
             <div class="lg:w-96 shrink-0">
-              <select data-ex="ej5_teoria_tp5" data-key="item_no_conmutatividad_mixtos" aria-label="1. Orden de Cuantificadores Mixtos (∀ y ∃):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
+              <select data-ex="ej5_teoria_tp5" data-key="item_cuantificadores_mixtos_orden" aria-label="1. Semántica y No Conmutatividad de Cuantificadores Mixtos (∀ y ∃):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="conmutan_sin_cambiar_significado">Son exactamente equivalentes porque todos los cuantificadores conmutan libremente</option>
-                <option value="no_conmutan_cambia_significado_radicalmente">No conmutan: ∃x ∀y Ama(x,y) afirma que hay una persona específica que ama a todo el mundo, mientras que ∀y ∃x Ama(x,y) afirma que cada persona es amada por al menos alguien</option>
-                <option value="ambas_son_contradicciones_sintacticas">Ambas expresiones son sintácticamente inválidas en Lógica de Primer Orden</option>
-                <option value="solo_conmutan_si_dominio_infinito">Solo significan lo mismo cuando el predicado Ama es reflexivo</option>
+                <option value="existe_para_todo_exige_mismo_x">Porque ∃x ∀y exige un único x para todo y, mientras que ∀y ∃x permite un x distinto por cada y.</option>
+                <option value="son_equivalentes_siempre">Porque el orden de los cuantificadores es irrelevante cuando las variables son distintas.</option>
+                <option value="solo_universal_a_la_izquierda">Porque el cuantificador universal solo puede situarse a la izquierda del existencial.</option>
+                <option value="solo_conmutan_sin_conectivos">Porque la conmutación solo es válida en fórmulas lógicas que carecen de conectivos lógicos.</option>
               </select>
             </div>
           </div>
-          <!-- Ítem 2: item_dualidad_demorgan_cuantificadores -->
+          <!-- Ítem 2: item_demorgan_cuantificadores -->
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
-              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">2. Leyes de Dualidad de De Morgan para Cuantificadores:</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿A qué expresión cuantificada equivale formalmente la sentencia negada ¬∃x P(x)?</span>
+              <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">2. Leyes de De Morgan para Cuantificadores Lógicos:</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">Por la dualidad de De Morgan para cuantificadores, ¿a qué expresión es equivalente ¬∃x P(x)?</span>
             </div>
             <div class="lg:w-96 shrink-0">
-              <select data-ex="ej5_teoria_tp5" data-key="item_dualidad_demorgan_cuantificadores" aria-label="2. Leyes de Dualidad de De Morgan para Cuantificadores:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
+              <select data-ex="ej5_teoria_tp5" data-key="item_demorgan_cuantificadores" aria-label="2. Leyes de De Morgan para Cuantificadores Lógicos:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="existe_x_no_p">∃x ¬P(x)</option>
-                <option value="para_todo_x_no_p">∀x ¬P(x) — No existe ningún x que cumpla P equivale a que para todo x, no se cumple P(x)</option>
-                <option value="para_todo_x_p">∀x P(x)</option>
-                <option value="no_para_todo_x_p">¬∀x P(x)</option>
+                <option value="existe_x_no_p">∃x ¬P(x) — Existencia con negación interna.</option>
+                <option value="para_todo_x_no_p">∀x ¬P(x) — Para todo x no se cumple P.</option>
+                <option value="para_todo_x_p">∀x P(x) — Cuantificación universal afirmativa.</option>
+                <option value="no_para_todo_x_p">¬∀x P(x) — Negación externa universal.</option>
               </select>
             </div>
           </div>
@@ -663,10 +608,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_igualdad_dominio_familia" aria-label="3. Ingeniería del Conocimiento y Símbolo de Igualdad (=) en Parentesco:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="para_evitar_que_tengan_el_mismo_progenitor">Para impedir que dos hermanos compartan el mismo padre o madre</option>
-                <option value="para_evitar_que_persona_sea_su_propio_hermano">Para excluir la identidad reflexiva: sin ¬(x = y), cualquier hombre que tenga un progenitor sería deducido erróneamente como hermano de sí mismo</option>
-                <option value="porque_prolog_no_acepta_variables_iguales">Porque los cuantificadores universales prohíben usar dos variables en un mismo predicado</option>
-                <option value="para_forzar_que_sean_de_distinto_genero">Para garantizar que x e y tengan distinto género biológico</option>
+                <option value="para_evitar_que_tengan_el_mismo_progenitor">Para impedir que dos hermanos compartan el mismo progenitor en la base.</option>
+                <option value="porque_prolog_no_acepta_variables_iguales">Porque los cuantificadores universales prohíben usar variables idénticas.</option>
+                <option value="para_evitar_que_persona_sea_su_propio_hermano">Para evitar que un hombre sea deducido formalmente como hermano de sí mismo.</option>
+                <option value="para_forzar_que_sean_de_distinto_genero">Para garantizar que ambas personas posean obligatoriamente el mismo género.</option>
               </select>
             </div>
           </div>
@@ -679,25 +624,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej5_teoria_tp5" data-key="item_proposicionalizacion_herbrand_infinito" aria-label="4. Reducción a Inferencia Proposicional (UI, Skolemización y Universo de Herbrand):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="no_se_pueden_eliminar_existenciales">Es imposible reemplazar cuantificadores existenciales por constantes de Skolem</option>
-                <option value="universo_herbrand_infinito_terminos_anidados">El conjunto de términos terreno posibles (Padre(Juan), Padre(Padre(Juan)), ...) se vuelve infinito (Universo de Herbrand infinito), generando infinitas sentencias proposicionales</option>
-                <option value="convierte_todas_las_reglas_en_falsas">Todas las cláusulas de Horn se vuelven automáticamente insatisfacibles</option>
-                <option value="reduce_la_complejidad_a_constante">Elimina por completo las variables en tiempo O(1) sin generar cláusulas irrelevantes</option>
+                <option value="no_se_pueden_eliminar_existenciales">Impide eliminar cuantificadores existenciales mediante constantes de Skolem.</option>
+                <option value="convierte_todas_las_reglas_en_falsas">Vuelve automáticamente contradictorias e insatisfacibles las cláusulas de Horn.</option>
+                <option value="reduce_expresividad_unificacion">Reduce la expresividad formal del lenguaje impidiendo unificar predicados binarios.</option>
+                <option value="universo_herbrand_infinito_terminos_anidados">Genera infinitos términos terreno por anidamiento, volviendo infinito el Universo de Herbrand.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar y repasar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 8.2–8.4 (pp. 253–264) y Cap. 9.1 (pp. 272–277) • Diapositivas Clase 6 (`6 - Lógica de Primer Orden.pptx`, Slides 12–16).</p>
-          </div>
-        </details>
       </article>
     </section>
 
@@ -905,11 +839,11 @@
 % 2. Escribe aquí las 2 reglas (vuelo_con_escala/3 y ruta_segura_bajo_consumo/2):
 </textarea>
 
-          <!-- Panel de Validador Sintáctico en Tiempo Real (Linter Prolog) -->
+          <!-- Panel de Verificador preliminar de estructura y sintaxis básica de Prolog -->
           <div id="linter-panel-1" class="p-3.5 rounded-xl bg-[#01305B]/90 border border-[#6EC1E4]/40 space-y-2 text-xs">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="font-extrabold text-[#6EC1E4] flex items-center gap-1.5">
-                <span>🔍</span> Validador Sintáctico de Edimburgo en Tiempo Real:
+                <span>🔍</span> Verificador preliminar de estructura y sintaxis básica de Prolog:
               </span>
               <div class="flex flex-wrap items-center gap-2">
                 <span id="linter-facts-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
@@ -918,11 +852,14 @@
                 <span id="linter-rules-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
                   Reglas deductivas: 0 / 2
                 </span>
-                <span id="linter-status-1" class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-400/40">
+                <span id="linter-status-1" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-bold border border-slate-600">
                   ⏳ Pendiente de codificar
                 </span>
               </div>
             </div>
+            <p class="text-[11px] text-amber-200/90 italic">
+              ⚠️ Este verificador brinda orientación y no reemplaza la ejecución en SWI-Prolog.
+            </p>
             <div id="linter-preds-1" class="text-[11px] text-slate-300 prolog-code"></div>
             <ul id="linter-warnings-1" class="space-y-1 text-amber-300 text-[11px] list-disc list-inside"></ul>
           </div>
@@ -957,10 +894,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_aridad_consumo_bateria" aria-label="1. Aridad de predicados relacionales en la Base de Conocimientos:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="que_se_ejecuta_tres_veces">Que el predicado consumo_bateria solo puede consultarse un máximo de 3 veces</option>
-                <option value="aridad_tres_argumentos_origen_destino_nivel">Que consumo_bateria es un predicado ternario que recibe exactamente 3 argumentos (Origen, Destino, Nivel), mientras que enlace_aereo es binario (/2)</option>
-                <option value="que_retorna_tres_booleanos">Que devuelve tres valores de verdad simultáneos</option>
-                <option value="que_tiene_prioridad_tres">Que posee nivel de precedencia aritmética 3 en el compilador</option>
+                <option value="aridad_tres_argumentos_origen_destino_nivel">consumo_bateria recibe 3 argumentos posicionales y enlace_aereo 2.</option>
+                <option value="que_se_ejecuta_tres_veces">consumo_bateria define 3 cláusulas alternativas y enlace_aereo 2.</option>
+                <option value="que_retorna_tres_booleanos">consumo_bateria admite hasta 3 soluciones consecutivas y enlace_aereo 2.</option>
+                <option value="que_tiene_prioridad_tres">consumo_bateria requiere 3 variables libres y enlace_aereo 2 constantes.</option>
               </select>
             </div>
           </div>
@@ -973,10 +910,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_consulta_escala_jujuy_humahuaca" aria-label="2. Consulta existencial en SWISH: &quot;¿Por qué escala intermedia se vuela desde base_jujuy hasta posta_humahuaca?&quot;:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="vuelo_con_escala(base_jujuy, posta_humahuaca, escala) -&gt; false">vuelo_con_escala(base_jujuy, posta_humahuaca, escala). → Devuelve false</option>
-                <option value="vuelo_con_escala(base_jujuy, posta_humahuaca, Escala) -&gt; posta_tilcara">vuelo_con_escala(base_jujuy, posta_humahuaca, Escala). → Unifica Escala = posta_tilcara</option>
-                <option value="enlace_aereo(base_jujuy, posta_humahuaca) -&gt; true">enlace_aereo(base_jujuy, posta_humahuaca). → Devuelve true</option>
-                <option value="vuelo_con_escala(Escala, base_jujuy, hospital_puna)">vuelo_con_escala(Escala, base_jujuy, hospital_puna). → Unifica Escala = base_jujuy</option>
+                <option value="vuelo_con_escala(base_jujuy, posta_humahuaca, escala) -&gt; false">vuelo_con_escala(base_jujuy, posta_humahuaca, escala). → Devuelve false.</option>
+                <option value="vuelo_con_escala(base_jujuy, posta_humahuaca, Escala) -&gt; posta_tilcara">vuelo_con_escala(base_jujuy, posta_humahuaca, Escala). → Unifica Escala = posta_tilcara.</option>
+                <option value="enlace_aereo(base_jujuy, posta_humahuaca) -&gt; true">enlace_aereo(base_jujuy, posta_humahuaca). → Devuelve true directamente.</option>
+                <option value="vuelo_con_escala(Escala, base_jujuy, hospital_puna)">vuelo_con_escala(Escala, base_jujuy, hospital_puna). → Unifica Escala = base_jujuy.</option>
               </select>
             </div>
           </div>
@@ -989,10 +926,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_backtracking_rutas_seguras" aria-label="3. Soluciones por Backtracking de ruta_segura_bajo_consumo(Origen, Destino).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="los_tres_tramos_de_la_red">Los 3 tramos aéreos cumplen la regla sin excepción</option>
-                <option value="dos_tramos_jujuy_tilcara_y_tilcara_humahuaca">Exactamente 2 tramos: primero (Origen = base_jujuy, Destino = posta_tilcara) y luego (Origen = posta_tilcara, Destino = posta_humahuaca)</option>
-                <option value="solo_humahuaca_a_hospital_puna">Únicamente el tramo posta_humahuaca → hospital_puna</option>
-                <option value="ningun_tramo_retorna_false">Ninguno, retorna false inmediatamente</option>
+                <option value="los_tres_tramos_de_la_red">Exactamente 3 tramos: incluye además el tramo hasta hospital_puna.</option>
+                <option value="solo_humahuaca_a_hospital_puna">Exactamente 1 tramo: únicamente posta_humahuaca → hospital_puna.</option>
+                <option value="dos_tramos_jujuy_tilcara_y_tilcara_humahuaca">Exactamente 2 tramos: base_jujuy → posta_tilcara y posta_tilcara → posta_humahuaca.</option>
+                <option value="ningun_tramo_retorna_false">Ningún tramo satisface la regla, retornando false inmediatamente.</option>
               </select>
             </div>
           </div>
@@ -1005,10 +942,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_evaluacion_ruta_segura_tilcara" aria-label="4. Evaluación de la consulta cerrada ruta_segura_bajo_consumo(base_jujuy, posta_tilcara).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="false_viento_rafagas">false, porque en posta_tilcara hay viento con ráfagas</option>
-                <option value="true_cumple_enlace_bajo_y_calmo">true, porque se satisfacen las tres condiciones: existe el enlace directo, el consumo es bajo y el viento en posta_tilcara es calmo</option>
-                <option value="error_aridad_predicado">Error de sintaxis por usar tres submetas en una misma regla</option>
-                <option value="retorna_consumo_alto">Devuelve Nivel = alto por backtracking</option>
+                <option value="false_viento_rafagas">false, pues aunque existe enlace el viento en destino no está registrado.</option>
+                <option value="error_aridad_predicado">false, pues el consumo del tramo supera el umbral permitido en la regla.</option>
+                <option value="retorna_consumo_alto">true, pero unificando una variable libre adicional en la respuesta.</option>
+                <option value="true_cumple_enlace_bajo_y_calmo">true, pues se verifica enlace directo, consumo bajo y viento calmo.</option>
               </select>
             </div>
           </div>
@@ -1021,10 +958,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_evaluacion_humahuaca_puna_cwa" aria-label="5. Evaluación bajo CWA de ruta_segura_bajo_consumo(posta_humahuaca, hospital_puna).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="true_porque_hay_enlace_aereo">true, porque existe el hecho enlace_aereo(posta_humahuaca, hospital_puna)</option>
-                <option value="false_falla_consumo_bajo_y_viento_calmo">false, porque el tramo tiene consumo alto y además el viento en hospital_puna es rafagas</option>
-                <option value="true_por_escala_en_tilcara">true, porque redirige el vuelo automáticamente por posta_tilcara</option>
-                <option value="ciclo_infinito_dfs">Entra en un lazo infinito de búsqueda en profundidad</option>
+                <option value="false_falla_consumo_bajo_y_viento_calmo">false, pues el consumo es alto y el viento en destino presenta ráfagas.</option>
+                <option value="true_porque_hay_enlace_aereo">true, pues el enlace directo satisface por sí solo la cabeza de la regla.</option>
+                <option value="true_por_escala_en_tilcara">true, pues el motor infiere automáticamente una escala intermedia segura.</option>
+                <option value="ciclo_infinito_dfs">false, pues el predicado no unifica por inconsistencia de aridad en la meta.</option>
               </select>
             </div>
           </div>
@@ -1037,25 +974,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_cwa_enlace_directo_inexistente" aria-label="6. Supuesto de Mundo Cerrado en enlace_aereo(base_jujuy, hospital_puna).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="true_porque_hay_camino_con_dos_escalas">true, porque deduce automáticamente la transitividad de tres tramos</option>
-                <option value="false_no_declarado_como_hecho_directo_cwa">false, porque enlace_aereo(base_jujuy, hospital_puna) no figura entre los hechos declarados y bajo CWA todo lo no demostrable es falso</option>
-                <option value="posta_tilcara_como_respuesta">Imprime posta_tilcara y posta_humahuaca</option>
-                <option value="error_nodo_desconocido">Lanza excepción de átomo inexistente</option>
+                <option value="true_porque_hay_camino_con_dos_escalas">true, pues deduce automáticamente la alcanzabilidad transitiva de la ruta.</option>
+                <option value="false_no_declarado_como_hecho_directo_cwa">false, pues no existe como hecho directo y bajo CWA lo no derivable es falso.</option>
+                <option value="posta_tilcara_como_respuesta">false, pues la regla de vuelo con escala bloquea las consultas directas.</option>
+                <option value="error_nodo_desconocido">true, pues unifica con el primer tramo asignando el resto a una variable libre.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 6–18).</p>
-          </div>
-        </details>
       </article>
       <!-- =====================================================================
            EJERCICIO P2: CENTRO DE OPERACIONES DE CIBERSEGURIDAD — SOC (PROLOG)
@@ -1088,25 +1014,22 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="critica">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">🌐 Equipo 1: srv_portal</span>
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🖥️ Servidor 1: srv_portal</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
-                  🔴 CVE: critica
+                  🔴 CVE: Crítica
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del host: srv_portal</span>
+                    <span aria-hidden="true">🌐</span> <span>Servicio provisto: web_https</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🖥️</span> <span>Servicio activo: web_https</span>
+                    <span aria-hidden="true">⚠️</span> <span>Severidad de alerta CVE: critica</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🚨</span> <span>Severidad de alerta CVE: critica</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🛡️</span> <span>Segmento de red: dmz</span>
+                    <span aria-hidden="true">🌐</span> <span>Segmento de red: dmz</span>
                   </span>
                 </div>
               </div>
@@ -1117,22 +1040,19 @@
             </div>
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="critica">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">💳 Equipo 2: srv_pagos</span>
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🖥️ Servidor 2: srv_pagos</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/30">
-                  🔴 CVE: critica
+                  🔴 CVE: Crítica
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del host: srv_pagos</span>
+                    <span aria-hidden="true">💳</span> <span>Servicio provisto: pasarela_api</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🖥️</span> <span>Servicio activo: pasarela_api</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🚨</span> <span>Severidad de alerta CVE: critica</span>
+                    <span aria-hidden="true">⚠️</span> <span>Severidad de alerta CVE: critica</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">🔒</span> <span>Segmento de red: red_interna</span>
@@ -1146,19 +1066,16 @@
             </div>
             <div class="domain2-card p-5 rounded-xl bg-[#F4F6F9] dark:bg-[#012243] border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all duration-300 shadow-sm space-y-3.5" data-category="baja">
               <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-[#01305B] dark:text-white text-sm">💾 Equipo 3: srv_backup</span>
+                <span class="font-bold text-[#01305B] dark:text-white text-sm">🖥️ Servidor 3: srv_backup</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30">
-                  🟢 CVE: baja
+                  🟢 CVE: Baja
                 </span>
               </div>
               <div class="space-y-1.5">
                 <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">Datos Técnicos a Modelar en Prolog:</span>
                 <div class="flex flex-col gap-1.5">
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🆔</span> <span>Átomo del host: srv_backup</span>
-                  </span>
-                  <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
-                    <span aria-hidden="true">🖥️</span> <span>Servicio activo: almacenamiento</span>
+                    <span aria-hidden="true">💾</span> <span>Servicio provisto: almacenamiento</span>
                   </span>
                   <span class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#01182E] border border-slate-200 dark:border-[#154D80] text-xs text-[#01305B] dark:text-slate-100 flex items-center gap-1.5">
                     <span aria-hidden="true">✅</span> <span>Severidad de alerta CVE: baja</span>
@@ -1256,11 +1173,11 @@
 % 2. Escribe aquí las 2 reglas (aislamiento_inmediato/1 y servidor_critico_dmz/2):
 </textarea>
 
-          <!-- Panel de Validador Sintáctico en Tiempo Real (Linter Prolog) -->
+          <!-- Panel de Verificador preliminar de estructura y sintaxis básica de Prolog -->
           <div id="linter-panel-2" class="p-3.5 rounded-xl bg-[#01305B]/90 border border-[#6EC1E4]/40 space-y-2 text-xs">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="font-extrabold text-[#6EC1E4] flex items-center gap-1.5">
-                <span>🔍</span> Validador Sintáctico de Edimburgo en Tiempo Real:
+                <span>🔍</span> Verificador preliminar de estructura y sintaxis básica de Prolog:
               </span>
               <div class="flex flex-wrap items-center gap-2">
                 <span id="linter-facts-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
@@ -1269,11 +1186,14 @@
                 <span id="linter-rules-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 font-bold border border-slate-600">
                   Reglas deductivas: 0 / 2
                 </span>
-                <span id="linter-status-2" class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-400/40">
+                <span id="linter-status-2" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-bold border border-slate-600">
                   ⏳ Pendiente de codificar
                 </span>
               </div>
             </div>
+            <p class="text-[11px] text-amber-200/90 italic">
+              ⚠️ Este verificador brinda orientación y no reemplaza la ejecución en SWI-Prolog.
+            </p>
             <div id="linter-preds-2" class="text-[11px] text-slate-300 prolog-code"></div>
             <ul id="linter-warnings-2" class="space-y-1 text-amber-300 text-[11px] list-disc list-inside"></ul>
           </div>
@@ -1308,10 +1228,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_estructura_clausula_horn_soc" aria-label="1. Semántica de las Cláusulas de Horn en la definición de reglas:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="implicacion_directa_y_disyuncion_logica">':-' significa ENTONCES (⇒) y la coma ',' significa DISYUNCIÓN (OR)</option>
-                <option value="implicacion_inversa_si_y_conjuncion_and">':-' significa SI condicional inverso (⇐) y la coma ',' significa CONJUNCIÓN lógica (AND), evaluada de izquierda a derecha</option>
-                <option value="asignacion_aritmetica_y_concatenacion">':-' es asignación de variable y ',' concatena cadenas de texto</option>
-                <option value="equivalencia_bicondicional_y_negacion">':-' es bicondicional (⇔) y ',' representa la negación lógica</option>
+                <option value="implicacion_directa_y_disyuncion_logica">':-' representa implicación directa (⇒) y ',' representa disyunción lógica (OR).</option>
+                <option value="asignacion_aritmetica_y_concatenacion">':-' representa equivalencia lógica (⇔) y ',' representa negación como falla (NAF).</option>
+                <option value="implicacion_inversa_si_y_conjuncion_and">':-' representa condicional inverso (⇐) y ',' representa conjunción lógica (AND).</option>
+                <option value="equivalencia_bicondicional_y_negacion">':-' representa asignación de valor y ',' representa secuenciación imperativa.</option>
               </select>
             </div>
           </div>
@@ -1324,10 +1244,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_consulta_hosts_aislamiento" aria-label="2. Consulta existencial en consola: &quot;¿Qué hosts requieren aislamiento inmediato?&quot;:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="aislamiento_inmediato(host) -&gt; srv_backup">aislamiento_inmediato(host). → Devuelve Host = srv_backup</option>
-                <option value="aislamiento_inmediato(Host) -&gt; srv_portal_y_srv_pagos">aislamiento_inmediato(Host). → Devuelve primero Host = srv_portal y con ';' devuelve Host = srv_pagos</option>
-                <option value="alerta_cve(critica, Host) -&gt; true">alerta_cve(critica, Host). → Devuelve únicamente true</option>
-                <option value="aislamiento_inmediato(X, Y) -&gt; error">aislamiento_inmediato(X, Y). → Devuelve los 3 servidores</option>
+                <option value="aislamiento_inmediato(host) -&gt; srv_backup">aislamiento_inmediato(host). → Devuelve únicamente Host = srv_backup.</option>
+                <option value="alerta_cve(critica, Host) -&gt; true">alerta_cve(critica, Host). → Devuelve true sin mostrar las constantes unificadas.</option>
+                <option value="aislamiento_inmediato(X, Y) -&gt; error">aislamiento_inmediato(X, Y). → Devuelve los 3 servidores sin evaluar la severidad.</option>
+                <option value="aislamiento_inmediato(Host) -&gt; srv_portal_y_srv_pagos">aislamiento_inmediato(Host). → Devuelve Host = srv_portal y luego Host = srv_pagos.</option>
               </select>
             </div>
           </div>
@@ -1340,10 +1260,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_evaluacion_portal_dmz" aria-label="3. Resultado de la consulta servidor_critico_dmz(Host, Servicio).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="srv_pagos_y_pasarela_api">Host = srv_pagos, Servicio = pasarela_api</option>
-                <option value="srv_portal_y_web_https">Host = srv_portal, Servicio = web_https (único host con alerta crítica ubicado en la zona dmz)</option>
-                <option value="srv_backup_y_almacenamiento">Host = srv_backup, Servicio = almacenamiento</option>
-                <option value="ninguna_solucion_false">false, porque ningún servidor está en la DMZ</option>
+                <option value="srv_portal_y_web_https">Host = srv_portal, Servicio = web_https.</option>
+                <option value="srv_pagos_y_pasarela_api">Host = srv_pagos, Servicio = pasarela_api.</option>
+                <option value="srv_backup_y_almacenamiento">Host = srv_backup, Servicio = almacenamiento.</option>
+                <option value="ninguna_solucion_false">false, ningún servidor satisface la regla.</option>
               </select>
             </div>
           </div>
@@ -1356,10 +1276,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_traza_sld_pagos_dmz" aria-label="4. Traza SLD de la consulta cerrada servidor_critico_dmz(srv_pagos, pasarela_api).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="porque_no_ejecuta_pasarela_api">Porque srv_pagos no ejecuta el servicio pasarela_api</option>
-                <option value="porque_falla_submeta_red_segmento_dmz">Porque aunque cumple servidor(srv_pagos, pasarela_api) y alerta_cve(srv_pagos, critica), falla en la submeta red_segmento(srv_pagos, dmz) al estar en red_interna</option>
-                <option value="porque_tiene_alerta_baja">Porque su alerta CVE está declarada como baja</option>
-                <option value="porque_dmz_es_variable">Porque dmz comienza con minúscula</option>
+                <option value="porque_no_ejecuta_pasarela_api">Porque no unifica con el hecho de servicio asociado a srv_pagos.</option>
+                <option value="porque_falla_submeta_red_segmento_dmz">Porque falla la submeta red_segmento(srv_pagos, dmz) al operar en red_interna.</option>
+                <option value="porque_tiene_alerta_baja">Porque la severidad registrada en la base de conocimientos es baja.</option>
+                <option value="porque_dmz_es_variable">Porque la regla exige que el host carezca de vulnerabilidades críticas.</option>
               </select>
             </div>
           </div>
@@ -1373,8 +1293,8 @@
               <select data-ex="ej7_practica_caso2" data-key="item_consulta_negacion_segura_soc" aria-label="5. Consulta con Negación como Falla (\+): &quot;Servidores en red_interna que NO requieren aislamiento inmediato&quot;:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
                 <option value="not_aislamiento_primero">\+ aislamiento_inmediato(Host), red_segmento(Host, red_interna).</option>
-                <option value="red_segmento_primero_luego_naf">red_segmento(Host, red_interna), \+ aislamiento_inmediato(Host). → Liga Host = srv_backup</option>
                 <option value="red_segmento_sin_variable">red_segmento(red_interna, Host) :- \+ aislamiento_inmediato(Host).</option>
+                <option value="red_segmento_primero_luego_naf">red_segmento(Host, red_interna), \+ aislamiento_inmediato(Host). → Liga Host = srv_backup.</option>
                 <option value="aislamiento_igual_false">red_segmento(Host, red_interna), aislamiento_inmediato(Host) == false.</option>
               </select>
             </div>
@@ -1388,25 +1308,14 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej7_practica_caso2" data-key="item_evaluacion_backup_aislamiento_cwa" aria-label="6. Supuesto de Mundo Cerrado (CWA) al evaluar aislamiento_inmediato(srv_backup).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la opción en Prolog --</option>
-                <option value="true_porque_esta_en_red_interna">true, porque srv_backup almacena información sensible en la red interna</option>
-                <option value="false_alerta_baja_no_deriva_critica_cwa">false, porque srv_backup registra severidad baja y bajo CWA no es posible derivar alerta_cve(srv_backup, critica)</option>
-                <option value="true_por_unificacion_parcial">true, porque el primer argumento srv_backup existe en servidor/2</option>
-                <option value="syntax_error_cwa">Arroja excepción por falta de hecho negativo explícito</option>
+                <option value="true_porque_esta_en_red_interna">true, pues unifica parcialmente con el predicado de asignación de servicio.</option>
+                <option value="true_por_unificacion_parcial">false, pues el host carece de declaración de segmento en la base de datos.</option>
+                <option value="syntax_error_cwa">true, pues la regla infiere aislamiento preventivo para cualquier servidor.</option>
+                <option value="false_alerta_baja_no_deriva_critica_cwa">false, pues su alerta es baja y bajo CWA lo no derivable se asume falso.</option>
               </select>
             </div>
           </div>
         </div>
-
-        <!-- Orientación Bibliográfica Oficial -->
-        <details class="group mt-4 rounded-xl border border-[#1569AE]/30 bg-[#F4F6F9] dark:bg-[#01182E]/80 p-3.5 text-xs text-slate-700 dark:text-slate-200 transition-all">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-[#01305B] dark:text-[#FFED00] select-none">
-            <span>📖 Dónde estudiar este tema en la bibliografía oficial de cátedra</span>
-            <span class="transition group-open:rotate-180">▾</span>
-          </summary>
-          <div class="mt-2.5 pt-2.5 border-t border-slate-300 dark:border-[#154D80] space-y-1">
-            <p><strong>Referencia Bibliográfica:</strong> <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline text-[#1569AE] dark:text-[#6EC1E4] hover:text-[#01305B] font-semibold">Russell &amp; Norvig — Inteligencia Artificial: Un Enfoque Moderno</a> &bull; Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 11–20).</p>
-          </div>
-        </details>
       </article>
     </section>
 
@@ -1421,7 +1330,7 @@
         Generar y Exportar Archivo de Respuestas + Bases de Conocimiento (<code>respuestas_primera_instancia.json</code>)
       </h3>
       <p class="text-slate-600 dark:text-slate-200 text-sm max-w-2xl mx-auto">
-        Verifica que el indicador superior marque <strong>34 de 34 completados (100%)</strong> (20 preguntas teóricas, las 2 Bases de Conocimiento Prolog con sus 9 hechos y 2 reglas cada una, y las 12 preguntas de consultas). Descarga el JSON y ejecuta <code>python autograder_primera_instancia.py respuestas_primera_instancia.json</code>.
+        Verifica que el indicador superior marque <strong>34 de 34 completados (100%)</strong> (20 preguntas teóricas, las 2 Bases de Conocimiento Prolog con sus 9 hechos y 2 reglas cada una, y las 12 preguntas de consultas).
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -1480,58 +1389,20 @@
   </div>
 
   <!-- =========================================================================
-       MODAL 2: MAPA BIBLIOGRÁFICO COMPLETO (TP1 A TP7)
-  ========================================================================== -->
-  <div id="modal-biblio" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#023967] border-2 border-[#1569AE] rounded-2xl max-w-4xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
-      <div class="px-5 py-4 bg-[#01305B] text-white flex items-center justify-between">
-        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">📖 Mapa Bibliográfico Oficial de Cátedra — Laboratorio I (UCSE DASS)</h3>
-        <button type="button" id="btn-close-biblio" class="px-2.5 py-1 rounded bg-rose-600 text-white text-xs font-bold hover:bg-rose-500 transition">
-          ✕ Cerrar
-        </button>
-      </div>
-      <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-700 dark:text-slate-200">
-        <p>Toda la evaluación se fundamenta en el libro de cátedra <a href="http://jdelagarza.fime.uanl.mx/IA/Libros/inteligencia-artificial-un-enfoque-moderno-stuart-j-russell.pdf" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#1569AE] dark:text-[#FFED00]">Russell, S. &amp; Norvig, P. — Inteligencia Artificial: Un Enfoque Moderno</a> y en las presentaciones oficiales:</p>
-        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-[#154D80]">
-          <table class="w-full text-left border-collapse">
-            <thead class="bg-[#01305B] text-[#FFED00] uppercase text-[11px]">
-              <tr>
-                <th class="p-3">Sección / Unidad</th>
-                <th class="p-3">Capítulos en Russell &amp; Norvig</th>
-                <th class="p-3">Presentaciones de Cátedra (Ing. Fabio Argañaraz)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200 dark:divide-[#154D80]">
-              <tr><td class="p-3 font-bold">Parte I • TP1 (Agentes y PEAS)</td><td class="p-3">Cap. 1 (pp. 1–30), Cap. 2 (pp. 34–58) y Cap. 26 (pp. 1020–1028)</td><td class="p-3">Clases 1, 2 y 3.1</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP2 (Búsqueda a Ciegas)</td><td class="p-3">Cap. 3.1 a 3.5 (pp. 64–96, Tabla 3.17)</td><td class="p-3">Clase 3.2: Resolución mediante búsqueda</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP3 (Búsqueda Informada)</td><td class="p-3">Cap. 4.1 a 4.3 (pp. 98–121)</td><td class="p-3">Clase 4: Búsqueda informada y exploración</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP4 (Conocimiento y LP)</td><td class="p-3">Cap. 7.1 a 7.5 (pp. 194–224)</td><td class="p-3">Clase 5: Conocimiento y Razonamiento</td></tr>
-              <tr><td class="p-3 font-bold">Parte I • TP5 (Lógica Primer Orden)</td><td class="p-3">Cap. 8 (pp. 240–268) y Cap. 9.1–9.5 (pp. 272–308)</td><td class="p-3">Clase 6: Lógica de Primer Orden</td></tr>
-              <tr><td class="p-3 font-bold">Parte II • TP7 (Práctica en Prolog)</td><td class="p-3">Cap. 9.4–9.5 (Resolución SLD, Horn, CWA y NAF)</td><td class="p-3">Clase 7: Lógica aplicada en PROLOG</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================================================================
-       MODAL 3: GUÍA DE AUTOEVALUACIÓN Y ENTREGA GIT / GITHUB
+       MODAL 2: GUÍA DE ENTREGA Y COMANDOS GIT
   ========================================================================== -->
   <div id="modal-git" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white dark:bg-[#023967] border-2 border-[#1569AE] rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
       <div class="px-5 py-4 bg-[#01305B] text-white flex items-center justify-between">
-        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">🐙 Instructivo de Autoevaluación Híbrida (KB + Consultas) y Entrega Git</h3>
+        <h3 class="font-extrabold text-sm text-[#FFED00] ucse-heading">🐙 Instructivo de Entrega y Comandos Git</h3>
         <button type="button" id="btn-close-git" class="px-2.5 py-1 rounded bg-rose-600 text-white text-xs font-bold hover:bg-rose-500 transition">
           ✕ Cerrar
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
-        <p><strong>1. Codificar las Bases de Conocimiento (26 pts) y responder el cuestionario (74 pts):</strong> En cada caso práctico de la Parte II, escribe tus 9 hechos y 2 reglas en el <strong>Editor de Entrega de Base de Conocimientos</strong> (puedes usar el botón <em>Descargar .pl</em> o <em>Cargar .pl</em>). El Linter en vivo verificará que no tengas errores de sintaxis.</p>
-        <p><strong>2. Exportar el archivo JSON unificado:</strong> Al llegar a 34/34 completados (100%), pulsa en <strong>Exportar (.json)</strong> para guardar <code>respuestas_primera_instancia.json</code> (incluye tanto tus selecciones como el código fuente de tus 2 Bases de Conocimientos).</p>
-        <p><strong>3. Ejecutar el Autoevaluador en Python 3:</strong></p>
-        <pre class="p-3 rounded-lg bg-[#01182E] text-[#FFED00] prolog-code overflow-x-auto">python autograder_primera_instancia.py respuestas_primera_instancia.json</pre>
-        <p><strong>4. Confirmar y subir tu entrega al repositorio GitHub:</strong></p>
+        <p><strong>1. Codificar las Bases de Conocimiento (26 pts) y responder el cuestionario (74 pts):</strong> En cada caso práctico de la Parte II, escribe tus 9 hechos y 2 reglas en el <strong>Editor de Entrega de Base de Conocimientos</strong> (puedes usar el botón <em>Descargar .pl</em> o <em>Cargar .pl</em>). El Verificador preliminar comprobará que la estructura sintáctica sea adecuada.</p>
+        <p><strong>2. Exportar el archivo JSON unificado:</strong> Al llegar a 34/34 completados (100%), pulsa en <strong>Exportar (.json)</strong> para guardar <code>respuestas_primera_instancia.json</code> (incluye tus respuestas seleccionadas, el código de ambas Bases de Conocimientos y marcas temporales de entrega).</p>
+        <p><strong>3. Confirmar y subir tu entrega al repositorio GitHub de la Cátedra:</strong></p>
         <pre class="p-3 rounded-lg bg-[#01182E] text-[#6EC1E4] prolog-code overflow-x-auto">git add respuestas_primera_instancia.json *.pl
 git commit -m "Entrega 1era Instancia de Examen Integrador - [Tu Nombre y Apellido]"
 git push origin main</pre>

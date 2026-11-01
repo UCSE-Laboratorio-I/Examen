@@ -5,7 +5,7 @@
     "catedra": "Laboratorio I - Tecnicatura Universitaria en Automatización y Robótica / Informática - UCSE DASS",
     "ciclo": 2026,
     "docente": "Ing. Fabio D. Argañaraz",
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "security": {
     "algorithm": "SHA-256 + Salted HMAC + Canonical Prolog AST Alpha-Hash",
@@ -32,7 +32,7 @@
       "feedback": "El mundo de la aspiradora con 2 recintos tiene 2 × 2² = 8 estados, y el 8-puzzle tiene 9!/2 = 181.440 estados alcanzables. UCS ordena la frontera por g(n) y exige costos de paso >= epsilon > 0. IDDFS combina la completitud/optimalidad de BFS con el consumo espacial lineal O(b·d) de DFS.",
       "hashes": {
         "item_combinatoria_aspiradora_8puzzle": "9d3ff3f46546c22a88c5dbf9cabd963cc07f17ddfe77146dcaa0f48c5c75a869",
-        "item_ucs_cola_condicion_optimalidad": "f8da8eb53d9cb53226e778df1ef4f05128576468ef3edfaa042c3acad5962dc0",
+        "item_ucs_cola_condicion_optimalidad": "12f5b632324ce663e68aaf71c242dcccbf7a8434779e5abf2360c877c7e0e2a4",
         "item_iddfs_complejidad_ventaja": "c9ddbfd1ff4aed0974e6a2c9f04b9859b4ae9278161c380f2a7533bad3685c7f",
         "item_iddfs_sobrecarga_regeneracion": "b45b5fdcada88bd5971d8b8e924625a2d5391a0f08123cc44a56633c3eda81a2"
       }
@@ -58,17 +58,17 @@
         "item_tabla_verdad_demorgan": "8e9ee61c014d0bd87a1e0993a3bb276fff8b69328ec09e52ad7e78056f6e4905",
         "item_complejidad_tt_entails": "b19393b95973421bd832bc841a053da055072347d7df9f42470d187cc80653b0",
         "item_equivalencia_contraposicion": "513d227098e00392fecd4c6b9a61ecb9e82d2ceb906bbd3ef97820d41160b92d",
-        "item_eliminacion_implicacion": "1f2c34bfdb5175a51072e8050e8279374378af4a82eae8aaf62c5a5ab7dfc338"
+        "item_equivalencia_eliminacion_implicacion": "e90dde177824827d0aef8f20760af5f1eb27e46c35b321b4a53fa7fdb31a7a16"
       }
     },
     "ej5_teoria_tp5": {
       "part": "teoria",
       "weight": 10,
-      "biblio": "Russell & Norvig Cap. 8.2–8.4 (pp. 253–264) y Cap. 9.1 (pp. 272–277) • Diapositivas Clase 6 (`6 - Lógica de Primer Orden.pptx`, Slides 12–16).",
-      "feedback": "Los cuantificadores mixtos NO conmutan: ∃x ∀y Ama(x,y) difiere de ∀y ∃x Ama(x,y). Por dualidad de De Morgan, ∀x P(x) ≡ ¬∃x ¬P(x). En la definición de Hermano(x,y), es obligatorio incluir ¬(x = y) para que nadie sea su propio hermano. Al proposicionalizar con símbolos de funciones (como Padre(x)), el universo de Herbrand se vuelve infinito.",
+      "biblio": "Russell & Norvig Cap. 8.2–8.4 (pp. 248–268) y Cap. 9.1 (pp. 280–286) • Diapositivas Clase 6 (`6 - Lógica de Primer Orden.pptx`, Slides 8–24).",
+      "feedback": "∀y ∃x P(x, y) permite que x dependa de y, mientras que ∃x ∀y P(x, y) exige que el mismo x funcione para todos los y (no conmutan). Por De Morgan, ¬∃x P(x) ≡ ∀x ¬P(x). En relaciones simétricas como Hermano(x,y), ¬(x=y) evita que una persona sea su propio hermano. La inclusión de símbolos de función (como Padre(x)) genera infinitos términos terreno en el Universo de Herbrand.",
       "hashes": {
-        "item_no_conmutatividad_mixtos": "c3cba8cf9cd1db9701bb4ffebab7001b06f5a3e57a60416f4ecfe62e9bde0c38",
-        "item_dualidad_demorgan_cuantificadores": "2376b4d670bd0ecae8eb44fe548171653e59ac63fdc5356758088d035f6db4ea",
+        "item_cuantificadores_mixtos_orden": "6a4febab011013d428880be79e6bb19ad89065668fe9a5e25ccf4a349b721287",
+        "item_demorgan_cuantificadores": "d7e2dc4272527d1a7d66ffc97683cd8741b21748287f7c6e713291273a109d49",
         "item_igualdad_dominio_familia": "2971d7a37cff4dca9a194fd442c655f0dc5a39daabae8779f0ccaadc03d55e8b",
         "item_proposicionalizacion_herbrand_infinito": "8b990d34e372ccce48663327b32e5c8132f7bcdf7c84460993e602a61e5a3daf"
       }
