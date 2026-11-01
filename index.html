@@ -350,14 +350,14 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#1569AE] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#6EC1E4] text-sm block">3. Búsqueda Primero en Profundidad Iterativa (IDDFS):</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Por qué IDDFS es la estrategia de búsqueda no informada preferida cuando el espacio de estados es muy grande y no se conoce la profundidad d de la solución?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Por qué IDDFS resulta especialmente adecuada cuando el espacio de estados es muy grande y no se conoce la profundidad d de la solución?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_iddfs_complejidad_ventaja" aria-label="3. Búsqueda Primero en Profundidad Iterativa (IDDFS):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
                 <option value="porque_no_regenera_ningun_nodo">Porque visita cada nodo una sola vez reteniendo el árbol completo en memoria O(b^d).</option>
                 <option value="porque_usa_heuristica_manhattan">Porque incorpora información heurística del dominio para podar ramas no prometedoras.</option>
-                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque combina la optimalidad de BFS con el requerimiento de memoria lineal O(b·d) de DFS.</option>
+                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque combina la completitud de BFS y, con costos de paso uniformes, su optimalidad, utilizando memoria lineal O(b·d) como DFS.</option>
                 <option value="porque_ordena_por_costo_acumulado">Porque expande nodos en orden creciente de costo acumulado g(n) garantizando rapidez.</option>
               </select>
             </div>
