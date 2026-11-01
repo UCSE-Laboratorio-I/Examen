@@ -5,7 +5,7 @@
     "catedra": "Laboratorio I - Tecnicatura Universitaria en Automatización y Robótica / Informática - UCSE DASS",
     "ciclo": 2026,
     "docente": "Ing. Fabio D. Argañaraz",
-    "version": "2.1.0"
+    "version": "2.2.0"
   },
   "security": {
     "algorithm": "SHA-256 + Salted HMAC + Canonical Prolog AST Alpha-Hash",
@@ -75,9 +75,9 @@
     },
     "ej6_practica_caso1": {
       "part": "practica",
-      "weight": 25,
-      "kb_weight": 13,
-      "questions_weight": 12,
+      "weight": 50,
+      "kb_weight": 26,
+      "questions_weight": 24,
       "pl_file": "caso1_drones.pl",
       "expected_pred_sigs": [
         "enlace_aereo/2",
@@ -87,7 +87,7 @@
         "ruta_segura_bajo_consumo/2"
       ],
       "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 6–18).",
-      "feedback": "En la red de drones, debes declarar los 9 hechos (3 de enlace_aereo/2, 3 de consumo_bateria/3 y 3 de viento_zona/2) y las 2 reglas deductivas (vuelo_con_escala/3 y ruta_segura_bajo_consumo/2).",
+      "feedback": "En la red de drones, debes declarar los 9 hechos (3 de enlace_aereo/2, 3 de consumo_bateria/3 y 3 de viento_zona/2) y las 2 reglas deductivas (vuelo_con_escala/3 y ruta_segura_bajo_consumo/2) (26 pts). Las 6 consultas evalúan unificación, backtracking y CWA (24 pts).",
       "kb_facts_hashes": [
         "80f326d00613b0ef45870d132d1394d12dc0711ecfd6c5bf84c3839b5fd88369",
         "f3f3b00f4cf63917b1277fdd0e0461051a3cd5c9614bc1936e9051ade3f06679",
@@ -115,50 +115,6 @@
         "item_evaluacion_ruta_segura_tilcara": "22a4d812de7a34a811ce14cb0acd1bbc3af9a976f0f6ffcd12bb806672a0fefa",
         "item_evaluacion_humahuaca_puna_cwa": "aa35e7ad193a79a9dc2c23fbbda0a4ee63c4902877942a3f916ebbe048a53b5f",
         "item_cwa_enlace_directo_inexistente": "e23fd338674719077102e8dcd9f1fdea6e25fef257f2f5a0bbf3256338532ef0"
-      }
-    },
-    "ej7_practica_caso2": {
-      "part": "practica",
-      "weight": 25,
-      "kb_weight": 13,
-      "questions_weight": 12,
-      "pl_file": "caso2_ciberseguridad.pl",
-      "expected_pred_sigs": [
-        "servidor/2",
-        "alerta_cve/2",
-        "red_segmento/2",
-        "aislamiento_inmediato/1",
-        "servidor_critico_dmz/2"
-      ],
-      "biblio": "Russell & Norvig Cap. 9.4–9.5 (pp. 302–308) • Diapositivas Clase 7 (`7 - Lógica aplicada en PROLOG.pptx`, Slides 11–20).",
-      "feedback": "En el SOC de ciberseguridad, debes declarar los 9 hechos (3 de servidor/2, 3 de alerta_cve/2 y 3 de red_segmento/2) y las reglas aislamiento_inmediato/1 y servidor_critico_dmz/2.",
-      "kb_facts_hashes": [
-        "f6ae7f335bbc98376c2feb404fd715c4a79c858407020d8f915b6f0b2f4bb0f4",
-        "90eee40aaea7c89f90d4a526ec496f23a4a4d76a024e09b5b104007372ba2ccd",
-        "37e74cbef40705152e873012260fecd5bbe282b2ce198aab92e04a4a7d49c174",
-        "baef056fac90e3d1c42bfd8e9208d477d24694abd01d76d61d0d329166512e05",
-        "ad7540aa1fe34456602217b9995cbcddef83289334f4f75fbc3f7f50831c986b",
-        "527147699d1f1d538f6ff5a05ee8c8c9f70175dca507c396e4c6f1b42201aff3",
-        "f26902f8ab8cac41d06bb1f3e6b52916d63e0ae26265e79316a6255a351adf6e",
-        "1dae33c3fbf5f8e3b843bfbcd299921b510341dcd023a202a7ce5af0b3bec901",
-        "3cf494f8157ee1d51a74a19403f6212aa3aceca7d3669662b16c6430843b2d85"
-      ],
-      "kb_rules_hashes": {
-        "aislamiento_inmediato/1": [
-          "690cd346677856224459e5ed40d253851dd6213be6230e9114e3c9071ef841a7"
-        ],
-        "servidor_critico_dmz/2": [
-          "5afa2c381baa5237687ce9a8a52930cf9adb98d44ced5ea9a4487f7a40cd7c08",
-          "b8fe35ec5d5485cd175863a72b2996551b7419385ec398fb6f8b240be1dff314"
-        ]
-      },
-      "hashes": {
-        "item_estructura_clausula_horn_soc": "9711500546294fb065205c0b53e392c0856ee2cf6e3c6031f72e00533e70dc43",
-        "item_consulta_hosts_aislamiento": "6498fa5b8c706d182170fc21a40ea4cb466b14a2572a31902308d21d2edb9f7f",
-        "item_evaluacion_portal_dmz": "249f942537bc24db3c96a8586a25ae65570fe7dfa92b83a70c765d3b268a7ccc",
-        "item_traza_sld_pagos_dmz": "e51db3f0a00f51af000493872c51e3867cad85465cf01d93fab647dc58639e42",
-        "item_consulta_negacion_segura_soc": "ef277ed1db9e9ce247ed6e626dd37d668cfd3d1b0c70df8ed7bff69a5c04f0ea",
-        "item_evaluacion_backup_aislamiento_cwa": "79d02735b560fad359e6003df209bd9f27ba2efacbc1182c5f27f5a280e126f9"
       }
     }
   }
