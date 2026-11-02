@@ -255,10 +255,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej1_teoria_tp1" data-key="item_peas_diagnostico_medico" aria-label="2. Especificación PEAS de un Sistema Automatizado de Diagnóstico Médico:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="entorno_hospitalario">Entorno: pacientes, personal médico, equipos hospitalarios e infraestructura clínica.</option>
-                <option value="medida_rendimiento_performance">Medida de rendimiento: criterios externos utilizados para evaluar la seguridad, efectividad y eficiencia del sistema.</option>
-                <option value="actuadores_clinicos">Actuadores: pantallas con informes diagnósticos, derivaciones médicas y sugerencias terapéuticas.</option>
-                <option value="sensores_ingreso_datos">Sensores: formularios de síntomas, resultados de laboratorio y dispositivos de signos vitales.</option>
+                <option value="entorno_hospitalario">Entorno (Environment): ámbito exterior que determina los estados, dinámicas y restricciones operativas del agente.</option>
+                <option value="medida_rendimiento_performance">Medida de rendimiento (Performance): función objetiva que cuantifica el grado de éxito del comportamiento del agente en el entorno.</option>
+                <option value="actuadores_clinicos">Actuadores (Actuators): mecanismos físicos o digitales mediante los cuales el agente ejecuta acciones sobre el medio.</option>
+                <option value="sensores_ingreso_datos">Sensores (Sensors): dispositivos de percepción que capturan el estado del entorno y lo transmiten al agente.</option>
               </select>
             </div>
           </div>
@@ -313,7 +313,7 @@
         </div>
 
         <p class="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
-          Evalúa el cálculo combinatorio de espacios de estados en problemas canónicos (Aspiradora, 8-Puzzle, 8-Reinas) y las garantías algorítmicas de la Búsqueda de Costo Uniforme (UCS) y la Profundidad Iterativa (IDDFS).
+          Evalúa el cálculo combinatorio de espacios de estados en problemas canónicos (Aspiradora, 8-Puzzle) y las garantías algorítmicas de la Búsqueda de Costo Uniforme (UCS) y la Profundidad Iterativa (IDDFS).
         </p>
 
         <div class="space-y-3.5">
@@ -358,10 +358,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_iddfs_complejidad_ventaja" aria-label="3. Búsqueda Primero en Profundidad Iterativa (IDDFS):" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="porque_no_regenera_ningun_nodo">Porque visita cada nodo una sola vez reteniendo el árbol completo en memoria O(b^d).</option>
-                <option value="porque_usa_heuristica_manhattan">Porque incorpora información heurística del dominio para podar ramas no prometedoras.</option>
-                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque combina la completitud de BFS y, con costos de paso uniformes, su optimalidad, utilizando memoria lineal O(b·d) como DFS.</option>
-                <option value="porque_ordena_por_costo_acumulado">Porque expande nodos en orden creciente de costo acumulado g(n) garantizando rapidez.</option>
+                <option value="porque_no_regenera_ningun_nodo">Porque expande cada nodo una sola vez reteniendo la totalidad del árbol en memoria con requerimiento O(b^d).</option>
+                <option value="porque_usa_heuristica_manhattan">Porque utiliza funciones heurísticas admisibles para podar ramas no prometedoras reduciendo el espacio explorado.</option>
+                <option value="combina_optimalidad_bfs_con_memoria_lineal_dfs">Porque combina completitud y optimalidad (costos uniformes) de BFS con la memoria lineal O(b·d) propia de DFS.</option>
+                <option value="porque_ordena_por_costo_acumulado">Porque gestiona la frontera mediante una cola ordenada por costo acumulado g(n) alcanzando siempre la meta mínima.</option>
               </select>
             </div>
           </div>
@@ -374,10 +374,10 @@
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej2_teoria_tp2" data-key="item_iddfs_sobrecarga_regeneracion" aria-label="4. Análisis Asintótico de la Regeneración de Nodos en IDDFS:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
                 <option value="" disabled selected>-- Selecciona la respuesta técnica --</option>
-                <option value="porque_reutiliza_memoria_ram_previa">Porque los estados de niveles previos se congelan en memoria secundaria durante la búsqueda.</option>
-                <option value="porque_salta_niveles_pares">Porque la profundidad se duplica en cada iteración, omitiendo la exploración intermedia.</option>
-                <option value="porque_la_heuristica_poda_ramas">Porque la inclusión de podas heurísticas cancela asintóticamente el costo de regeneración.</option>
-                <option value="mayoria_nodos_estan_en_nivel_mas_profundo">Porque, cuando b &gt; 1, la mayor cantidad de nodos se encuentra en los niveles más profundos. Las regeneraciones agregan únicamente un factor constante, por lo que la complejidad temporal continúa siendo O(b^d).</option>
+                <option value="porque_reutiliza_memoria_ram_previa">Porque los estados de niveles previos se conservan congelados en memoria secundaria sin consumir ciclos de procesamiento.</option>
+                <option value="porque_salta_niveles_pares">Porque incrementa el límite de profundidad exponencialmente en cada ciclo, evitando la reexploración de nodos internos.</option>
+                <option value="porque_la_heuristica_poda_ramas">Porque la aplicación de podas heurísticas acotadas cancela asintóticamente la sobrecarga de generar niveles superiores.</option>
+                <option value="mayoria_nodos_estan_en_nivel_mas_profundo">Porque, si b &gt; 1, la mayoría de nodos reside en el nivel más profundo y la regeneración solo agrega un factor constante.</option>
               </select>
             </div>
           </div>
@@ -964,7 +964,7 @@
           <div class="flex flex-col lg:flex-row lg:items-center justify-between p-4 bg-slate-50 dark:bg-[#012243] rounded-xl border border-slate-200 dark:border-[#154D80] hover:border-[#0080FB] transition-all gap-4">
             <div class="lg:max-w-xl space-y-1">
               <span class="font-bold text-[#01305B] dark:text-[#FFED00] text-sm block">5. Evaluación bajo CWA de ruta_segura_bajo_consumo(posta_humahuaca, hospital_puna).:</span>
-              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Qué valor de verdad retorna la consola y por qué falla la derivación SLD?</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed block">¿Qué resultado retorna el motor de inferencia SLD al evaluar esta consulta y cuál es su justificación operativa?</span>
             </div>
             <div class="lg:w-96 shrink-0">
               <select data-ex="ej6_practica_caso1" data-key="item_evaluacion_humahuaca_puna_cwa" aria-label="5. Evaluación bajo CWA de ruta_segura_bajo_consumo(posta_humahuaca, hospital_puna).:" class="w-full bg-white dark:bg-[#01182E] text-slate-800 dark:text-slate-100 border border-[#B6C9DB] dark:border-[#1569AE] rounded-lg px-3.5 py-2.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0080FB] transition shadow-sm cursor-pointer">
@@ -988,7 +988,7 @@
                 <option value="true_porque_hay_camino_con_dos_escalas">true, pues deduce automáticamente la alcanzabilidad transitiva de la ruta.</option>
                 <option value="false_no_declarado_como_hecho_directo_cwa">false, pues no existe como hecho directo y bajo CWA lo no derivable es falso.</option>
                 <option value="posta_tilcara_como_respuesta">false, pues la regla de vuelo con escala bloquea las consultas directas.</option>
-                <option value="error_nodo_desconocido">true, pues unifica con el primer tramo asignando el resto a una variable libre.</option>
+                <option value="true_unifica_primer_tramo_variable_libre">true, pues unifica con el primer tramo asignando el resto a una variable libre.</option>
               </select>
             </div>
           </div>
